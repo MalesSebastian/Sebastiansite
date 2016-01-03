@@ -1,0 +1,51 @@
+body{
+	background-color: #ffffcc;
+}
+@font-face{
+	font-family: Fipps;
+	src: url('Fonts/Fipps.otf')
+}
+@font-face{
+	font-family: Gotham;
+	src:url('Fonts/Gotham.ttf')
+}
+#navbar{
+	font-size: 20px;
+	font-family: Fipps;
+	font-color:black;
+	margin: 0;
+	padding: -;
+	text-align: center;
+}
+#navbar ul li{
+	display: inline;
+}
+#navbar ul li a{
+	text-decoration: none;
+	padding: 100px 100px;	
+	color: black;
+}
+#navbar ul li a:hover{
+	text-decoration: underline;
+}
+.titles{
+	font-size: 20px;
+	margin-left: 5%;
+	font-family: Fipps;
+}
+.title{
+  text-align: center;
+  font-family: Fipps;
+}
+.Parg{
+    position: relative;
+    margin-left: 30%;
+    width: 800px;
+    font-family: Gotham;
+ }
+ .wpost{
+ 	margin-left: 30%;
+ }
+ .post {
+  text-align: center;
+}
