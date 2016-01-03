@@ -38,6 +38,8 @@ body{
 	font-size: 20px;
 	margin-left: 5%;
 	font-family: Fipps;
+	animation-name: first;
+	animation-duration: 1s;
 }
 .Parg{
 	position: relative;
@@ -45,4 +47,14 @@ body{
 	height: 20px;
 	width: 800px;
 	font-family: Gotham;
+	animation-name: second;
+	animation-duration:1.5s;
+}
+@keyframes first{
+	from{margin-left: 0%}
+	to{margin-left: 5%;}
+}
+@keyframes second{
+	from{margin-left: 20%;}
+	to{margin-left: 7%;}
 }
