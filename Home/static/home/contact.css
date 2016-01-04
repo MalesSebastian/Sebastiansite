@@ -38,6 +38,8 @@ body{
 	font-size: 20px;
 	margin-left: 5%;
 	font-family: Fipps;
+	animation-name: titlesan;
+	animation-duration: 1s;
 }
 .Parg{
 	position: relative;
@@ -45,8 +47,18 @@ body{
 	height: 20px;
 	width: 800px;
 	font-family: Gotham;
+	animation-name: parag;
+	animation-duration: 1s;
 }
-.twitter{
+#twitter{
+	margin-top: -5%;
 	margin-left: 60%;
-	margin-top: -6%;
+}
+@keyframes parag{
+	from {margin-left: 16%;}
+	to {margin-left: 7%;}
+}
+@keyframes titlesan{
+	from {margin-left: 0%;}
+	to {margin-left: 5%;}
 }

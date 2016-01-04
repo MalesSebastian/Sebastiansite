@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Home.models import Post
+from Home.models import Post, Comment
 
 
 def make_published(modeladmin, request, queryset):
@@ -14,4 +14,10 @@ class PostAdmin(admin.ModelAdmin):
     ordering = ['title']
     actions = [make_published]
 
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['text', 'submitter']
+    ordering = ['submitter']
+
 admin.site.register(Post, PostAdmin)
+admin.site.register(Comment, CommentAdmin)

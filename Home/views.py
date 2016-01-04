@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response, get_object_or_404
 from Home.models import Post, Comment
+from django.template import RequestContext
 
 
 def front(request):
@@ -17,15 +18,14 @@ def contact(request):
 
 
 def page(request, slug):
+    post = Post.objects.get(pk=1)
     if request.method == 'POST':
         username = request.POST.get('username')
         body = request.POST.get('body')
-        post = Post.objects.get(pk=1)
         new_comment = Comment.objects.create(post_at=post, submitter=username, text=body)
         new_comment.save()
-    comments = Comment.objects.all()
     return render_to_response('home/post.html', {
         'post': get_object_or_404(Post, slug=slug),
-        'comments': comments
-    })
+        'comments': Comment.objects.filter(post_at=post),
+    }, context_instance=RequestContext(request))
 

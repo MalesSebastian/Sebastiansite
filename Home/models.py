@@ -32,5 +32,5 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post_at = models.ForeignKey(Post, related_name="comments")
-    submitter = models.TextField
-    text = models.CharField
+    submitter = models.TextField(default='', max_length=20)
+    text = models.CharField(default='', max_length=200)

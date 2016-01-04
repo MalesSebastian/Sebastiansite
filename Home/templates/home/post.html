@@ -36,7 +36,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="$">About me</a></li>
+                    <li><a href="{% url 'front' %}">About me</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/contact" class="lastel">Contact</a></li>
                 </ul>
@@ -51,27 +51,40 @@
         <p class="Parg">{{ post.text }}</p>
         <br>
         </div>
-        <div class="wpost">
-        <form>
-        <input type="text" name="username" placeholder="Nickname" style="width:800px; background-color: #ffffcc;" required />
-        <br>
-        <input type="text" name="body" placeholder="Write your comment here" style="width:800px; background-color: #ffffcc;" required />
-        <br>
-        <br>
-        <input type="submit" name="register" value="Add comment" />
-        </form>
-        </div>
-        <div class="comments">
-            {% for comment in comments.all %}
-            <div class="comm">
-                <a> comment.submitter</a>
-                <br>
-                <br>
-                <p> comment.text </a>
-                <br>
-                <br>
+        <hr style="width:44%">
+        <br><br> 
+        <form method="post" action="" id="sumbitcom">
+        {% csrf_token %}
+            <div class="wpost">
+            <label style="font-family:Gotham ">Name: </label>
+            <br>
+            <input type="text" name="username" class="Nick" required/>
+            <br>
+            <label style="font-family:Gotham ">Comment: </label>
+            <br>
+            <textarea name="body" placeholder="Write your comment here" form="sumbitcom" rows="5" class="text" required> </textarea>
+            <br>
+            <br>
+            <input type="submit" name="register" value="Add comment" class="button"/>
             </div>
+        </form>
+        <br>
+        <hr style="width:44%">
+        <br><br>
+        <div class="comments">
+        <label class="label">Comments: </label>
+        <br>
+        <br>
+        <div class="comments2">
+            {% for comment in comments %}
+            <div class="comm">
+                <a>Submitted by {{ comment.submitter }}</a>
+                <br>
+                <p>{{ comment.text }}</p>
+            </div>
+            <br><br>
             {% endfor %}
+        </div>
         </div>
     </div>
     </div>

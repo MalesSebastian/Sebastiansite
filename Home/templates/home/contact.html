@@ -35,7 +35,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="^$">About me</a></li>
+                    <li><a href="{% url 'front' %}">About me</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/contact" class="lastel">Contact</a></li>
                 </ul>
@@ -51,12 +51,10 @@
         <div>
             <a class="titles">Facebook:</a><a class="Parg">Sebi Males</a>
         </div>
-        <div>
-        <div class="twitter">
+        <div id="twitter">
             <a class="twitter-timeline" href="https://twitter.com/malessebi" data-widget-id="682562892680572928">Tweets by @malessebi</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-        </div>  
+        </div> 
     </div>
     </body>
 </html>

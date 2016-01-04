@@ -38,6 +38,8 @@ body{
     font-size: 20px;
     margin-left: 1%;
     font-family: Fipps;
+    animation-name: titlesan;
+    animation-duration: 1s;
 }
 .Parg{
     position: relative;
@@ -45,6 +47,8 @@ body{
     height: 20px;
     width: 800px;
     font-family: Gotham;
+    animation-name: parag;
+    animation-duration: 1s;
 }
 .content{
     text-align: center;
@@ -59,4 +63,12 @@ body{
 }
 .Read:hover{
     text-decoration: underline;
+}
+@keyframes parag{
+    from {margin-left: 10%;}
+    to {margin-left: 30%;}
+}
+@keyframes titlesan{
+    from {margin-left: 30%;}
+    to {margin-left: 1%;}
 }
