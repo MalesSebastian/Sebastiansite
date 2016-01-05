@@ -18,7 +18,7 @@ def contact(request):
 
 
 def page(request, slug):
-    post = Post.objects.get(pk=1)
+    post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
         username = request.POST.get('username')
         body = request.POST.get('body')
