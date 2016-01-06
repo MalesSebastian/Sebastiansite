@@ -3,7 +3,7 @@ This is the repository for my personal web site.
 
 Here I present myself on the front page: http://imgur.com/BSoiINd
 
-Also there is a my personal blog(not currently active): http://imgur.com/Dne3wLx
+Also there is a my personal blog(currently not active): http://imgur.com/Dne3wLx
 
 Also every post has a comment section: http://imgur.com/AKidaun
 
